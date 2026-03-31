@@ -16,7 +16,8 @@
   body {
     background-color: #f5f2ec;
     color: #0d0d0d;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    /* cursor: none; */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -29,9 +30,46 @@
 
 @layer utilities {
   .font-serif {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 }
+
+/* Cursor */
+/* .cursor-dot,
+.cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: #0d0d0d;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
+  z-index: 10000;
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(13, 13, 13, 0.4);
+  transition: width 0.35s ease, height 0.35s ease, border-color 0.3s ease;
+}
+
+.cursor-dot.hovering {
+  width: 6px;
+  height: 6px;
+  background: #c8b89a;
+}
+
+.cursor-ring.hovering {
+  width: 60px;
+  height: 60px;
+  border-color: #c8b89a;
+} */
 
 /* Marquee pause on hover */
 .marquee-wrapper:hover .marquee-track {
@@ -40,10 +78,7 @@
 
 /* Nav transition */
 nav {
-  transition:
-    background 0.4s ease,
-    box-shadow 0.4s ease,
-    backdrop-filter 0.4s ease;
+  transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 /* Card tilt */

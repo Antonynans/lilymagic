@@ -224,34 +224,6 @@ export function ProjectDetail({ project, gallery }: Props) {
             transition={{ duration: 0.8, delay: 0.9, ease: EXPO }}
           />
         </div>
-
-        <motion.div
-          className="absolute bottom-8 right-6 sm:right-12 z-10 flex flex-col items-center gap-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          <motion.div
-            className="w-px"
-            style={{
-              height: 44,
-              background:
-                "linear-gradient(to bottom, rgba(255,255,255,0.7), transparent)",
-            }}
-            animate={{ scaleY: [1, 0.3, 1], opacity: [1, 0.3, 1] }}
-            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-          />
-          <span
-            style={{
-              fontSize: "0.52rem",
-              letterSpacing: "0.28em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.45)",
-            }}
-          >
-            Scroll
-          </span>
-        </motion.div>
       </div>
 
       {project.description && (
@@ -275,7 +247,7 @@ export function ProjectDetail({ project, gallery }: Props) {
                 key={rowIdx}
                 src={row.src}
                 alt={`${project.title} ${row.idx}`}
-                aspectRatio="66%" 
+                aspectRatio="66%"
                 onClick={() => setLightboxSrc(row.src)}
               />
             );
