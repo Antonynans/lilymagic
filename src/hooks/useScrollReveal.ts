@@ -1,5 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
+/**
+ * Hook that detects when an element enters the viewport
+ * Used for scroll-reveal animations throughout the site
+ */
 export function useScrollReveal(options = { threshold: 0.2 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -7,6 +11,9 @@ export function useScrollReveal(options = { threshold: 0.2 }) {
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
+        setInView(true);
+        // Optional: stop observing after first intersection
+        // observer.unobserve(entry.target);
       } else {
         setInView(false);
       }
