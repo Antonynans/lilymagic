@@ -153,7 +153,7 @@ export function WorkPage() {
           </motion.div>
         </div>
 
-        <div className="lg:hidden relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-[3px] mt-10 px-3 sm:px-4">
+        <div className="lg:hidden relative z-10 grid grid-cols-1 gap-[3px] mt-10 px-3 sm:px-4">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}

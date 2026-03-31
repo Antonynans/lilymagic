@@ -33,7 +33,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="px-12 py-36 lg:grid grid-cols-2 gap-20 items-center border-t border-mid-grey"
+      className="px-12 lg:py-36 py-4 lg:grid grid-cols-2 gap-20 items-center border-t border-mid-grey"
     >
       <RevealLeft>
         <p className="text-[0.68rem] tracking-[0.22em] uppercase text-warm-grey mb-6">
